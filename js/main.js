@@ -1,33 +1,33 @@
-import dom, { getRandom, checkRandom, counter } from './adivinaDoom.js'
+import dom, { getRandom, checkRandom, counter } from './adivinaDoom.js';
 
 for (let i = 0; i < dom.ranges.length; i++)
   dom.ranges[i].addEventListener('input', () => {
-    dom.badges[i].textContent = dom.ranges[i].value
-  })
+    dom.badges[i].textContent = dom.ranges[i].value;
+  });
 
 for (let i = 0; i < dom.bodyModalranges.length; i++) {
-  dom.bodyModalranges[i].textContent = dom.ranges[i].value
+  dom.bodyModalranges[i].textContent = dom.ranges[i].value;
 }
 
-let random
-let count = 1
-console.log(++count)
+let random;
+let count = 1;
+console.log(++count);
 
 adivina.addEventListener('click', () => {
-  random = getRandom(dom.ranges)
-  console.log(random)
-})
+  random = getRandom(dom.ranges);
+  console.log(random);
+});
 
 checkIt.addEventListener('click', () => {
-  alerts.textContent = checkRandom(random, guessNumber)[0]
+  alerts.textContent = checkRandom(random, guessNumber)[0];
   if (checkRandom(random, guessNumber)[1] == 1) {
-    intentos.parentNode.textContent = 'Ala! a JUGAR DE NUEVO'
+    intentos.parentNode.textContent = 'Ala! a JUGAR DE NUEVO';
     setTimeout(() => {
-      window.location.reload(true)
-    }, 3000)
+      window.location.reload(true);
+    }, 30000);
   }
-  let cuenta = counter()
-  if (cuenta > 0) intentos.textContent = cuenta
+  const cuenta = counter();
+  if (cuenta > 0) intentos.textContent = cuenta;
   else {
     intentos.parentNode.textContent = `
     G
@@ -37,9 +37,9 @@ checkIt.addEventListener('click', () => {
                                    O
                                          V
                                              E 
-                                                 R`
-    setTimeout(() => window.location.reload(true), 1000)
+                                                 R`;
+    setTimeout(() => window.location.reload(true), 1000);
   }
-})
+});
 
-cierra.addEventListener('click', () => window.location.reload())
+cierra.addEventListener('click', () => window.location.reload());

@@ -11,8 +11,6 @@ const INTRO = ['Intruduce un número que es gratis.', 0];
 const store = [];
 export const rememberGuessNumbers = guessNumber => {
   guessNumber = parseInt(guessNumber.value);
-  console.log(guessNumber);
-  console.log(typeof guessNumber);
   store.push(`<span class="bg-danger text-warning"> ${guessNumber} </span>`);
   return store;
 };

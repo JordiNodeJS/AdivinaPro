@@ -19,11 +19,26 @@ adivina.addEventListener('click', () => {
 })
 
 checkIt.addEventListener('click', () => {
-  alerts.textContent = checkRandom(random, guessNumber)
-  if (counter() > 0) intentos.textContent = counter()
+  alerts.textContent = checkRandom(random, guessNumber)[0]
+  if (checkRandom(random, guessNumber)[1] == 1) {
+    intentos.parentNode.textContent = 'Ala! a JUGAR DE NUEVO'
+    setTimeout(() => {
+      window.location.reload(true)
+    }, 3000)
+  }
+  let cuenta = counter()
+  if (cuenta > 0) intentos.textContent = cuenta
   else {
-    intentos.parentNode.textContent = 'G A M E   O V E R'
-    setTimeout(() => window.location.reload(true), 10000)
+    intentos.parentNode.textContent = `
+    G
+         A
+             M
+                 E
+                                   O
+                                         V
+                                             E 
+                                                 R`
+    setTimeout(() => window.location.reload(true), 1000)
   }
 })
 

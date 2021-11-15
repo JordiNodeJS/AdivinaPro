@@ -3,10 +3,10 @@ const dom = {
   badges: document.querySelectorAll('.badge'),
   bodyModalranges: document.querySelectorAll('.modal-body span.badge'),
 }
-const NUM_MENOR = 'Tú número es menor que  el pensado.'
-const NUM_MAYOR = 'Tú número es mayor que  el pensado.'
-const EUREKA = 'EUREKA'
-const INTRO = 'Intruduce un número que es gratis.'
+const NUM_MENOR = ['Tú número es menor que  el pensado.', 0]
+const NUM_MAYOR = ['Tú número es mayor que  el pensado.', 0]
+const EUREKA = ['EUREKA', 1]
+const INTRO = ['Intruduce un número que es gratis.', 0]
 
 export const getRandom = ([min, max]) => {
   min = parseInt(min.value)

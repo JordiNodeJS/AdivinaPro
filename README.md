@@ -1,2 +1,3 @@
-# AdivinaPro
-[adivina](https://jordinodejs.github.io/AdivinaPro/)
+# Ejercicio A D I V I N A
+## Ejercicio online
+[Adivina](https://jordinodejs.github.io/AdivinaPro/)

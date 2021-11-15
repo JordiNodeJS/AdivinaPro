@@ -34,24 +34,30 @@
 
             <div class="d-grid">
                 <!-- Button trigger modal -->
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" id="adivina"
+                <button data-bs-toggle="modal" data-bs-target="#adivinaitor" type="button" id="adivina"
                     class="btn btn-outline-success">Adivina</button>
             </div>
             <!-- Modal -->
-            <div class="modal fade modal-title" id="exampleModal" tabindex="-1">
+            <div class="modal fade modal-title" id="adivinaitor" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Adivina un número</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            <h5 class="modal-title" id="exampleModalLabel">Adivina el número</h5>
+
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" id="cierra"></button>
                         </div>
                         <div class="modal-body">
-                            ...
+                            <p>Que esté entre <span class="badge bg-info">éste</span> y <span class="badge bg-info">este
+                                    otro</span></p>
+                            <p>Tienes <span id="intentos">x</span> intentos.</p>
+                            <p id="alerts">Mensajes de alerta</p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cierra que no
-                                veo</button>
-                            <button type="button" class="btn btn-primary">Éste es mi número de la suerte!</button>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <label for="guessNumber">
+                                <button id="checkIt" type="button" class="btn btn-primary mb-1">Éste es mi número de la
+                                    suerte!</button>
+                                <input type="number" class="form-control" id="guessNumber">
+                            </label>
                         </div>
                     </div>
                 </div>

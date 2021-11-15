@@ -1,4 +1,9 @@
-import dom, { getRandom, checkRandom, counter } from './adivinaDoom.js';
+import dom, {
+  getRandom,
+  checkRandom,
+  counter,
+  rememberGuessNumbers,
+} from './adivinaDoom.js';
 
 for (let i = 0; i < dom.ranges.length; i++)
   dom.ranges[i].addEventListener('input', () => {
@@ -19,6 +24,8 @@ adivina.addEventListener('click', () => {
 });
 
 checkIt.addEventListener('click', () => {
+  remember.innerHTML = rememberGuessNumbers(guessNumber);
+  console.log(rememberGuessNumbers(guessNumber));
   alerts.textContent = checkRandom(random, guessNumber)[0];
   if (checkRandom(random, guessNumber)[1] == 1) {
     intentos.parentNode.textContent = 'Ala! a JUGAR DE NUEVO';

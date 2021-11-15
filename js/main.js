@@ -25,13 +25,12 @@ adivina.addEventListener('click', () => {
 
 checkIt.addEventListener('click', () => {
   remember.innerHTML = rememberGuessNumbers(guessNumber);
-  console.log(rememberGuessNumbers(guessNumber));
   alerts.textContent = checkRandom(random, guessNumber)[0];
   if (checkRandom(random, guessNumber)[1] == 1) {
     intentos.parentNode.textContent = 'Ala! a JUGAR DE NUEVO';
     setTimeout(() => {
       window.location.reload(true);
-    }, 30000);
+    }, 3000);
   }
   const cuenta = counter();
   if (cuenta > 0) intentos.textContent = cuenta;

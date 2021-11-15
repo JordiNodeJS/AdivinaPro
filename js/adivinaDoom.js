@@ -8,14 +8,13 @@ const NUM_MAYOR = ['Tú número es mayor que  el pensado.', 0];
 const EUREKA = ['EUREKA', 1];
 const INTRO = ['Intruduce un número que es gratis.', 0];
 
+const store = [];
 export const rememberGuessNumbers = guessNumber => {
-  const store = [...guessNumber];
-  const storeFormated = [];
-  for (const item of store) {
-    item = `<span>${item} </span>`;
-    storeFormated = [...item];
-  }
-  return storeFormated;
+  guessNumber = parseInt(guessNumber.value);
+  console.log(guessNumber);
+  console.log(typeof guessNumber);
+  store.push(`<span class="bg-danger text-warning"> ${guessNumber} </span>`);
+  return store;
 };
 
 export const getRandom = ([min, max]) => {

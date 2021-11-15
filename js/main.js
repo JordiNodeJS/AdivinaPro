@@ -36,11 +36,12 @@ checkIt.addEventListener('click', () => {
     }, 3000)
   }
   guessNumber.value = ''
+
   const cuenta = counter()
   if (cuenta > 0) intentos.textContent = cuenta
   else {
-    intentos.parentNode.innerHTML = `<span class="bg-danger text-warning p-4">G A M E O V E R</span>`
-    setTimeout(() => window.location.reload(true), 1000)
+    intentos.parentNode.innerHTML = `<div class="alert alert-danger text-center bg-danger text-warning p-3">G A M E O V E R</div>`
+    setTimeout(() => window.location.reload(true), 100000)
   }
 })
 
